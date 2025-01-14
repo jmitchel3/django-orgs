@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "django-orgs"
-version = "0.0.1"
+version = "0.0.2"
 description = "A simple way to manage organizations in Django"
 readme = "README.md"
 authors = [
