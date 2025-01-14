@@ -1,0 +1,16 @@
+scripts:
+  install:
+    - venv/bin/python3 -m pip install -e .
+  sample_server:
+    - cd sample_project && ../venv/bin/python manage.py runserver 8133
+  sample_shell:
+    - cd sample_project && ../venv/bin/python manage.py shell
+  bump:
+    - venv/bin/bump2version patch
+  makemigrations:
+    - cd sample_project && ../venv/bin/python manage.py makemigrations
+    - ../venv/bin/python manage.py migrate
+  test:
+    - venv/bin/tox run -f py312
+    - venv/bin/coverage combine
+    - venv/bin/coverage report
